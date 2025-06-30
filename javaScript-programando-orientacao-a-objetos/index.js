@@ -5,23 +5,25 @@ class Customer {
 
 class ContaCorrente {
     agency;
-    balance;
+    balance = 0;
 
-    sacar(valor){
-        if (this.saldo >= valor) {
-            this.saldo -= valor;
-            console.log(`Saque no valor de R$ ${valor} realizado com sucesso.`)
-            console.log(`Saldo atual: R$ ${this.saldo}`);
+    sacar(value){
+        if (this.balance >= value) {
+            this.balance -= value;
+            console.log(`Saque no valor de R$ ${value} realizado com sucesso.`)
+            console.log(`Saldo atual: R$ ${this.balance}`);
         }else {
-            console.log(`Saldo insuficiente para saque de R$ ${valor}. Saldo atual: R$ ${this.saldo}`);
+            console.log(`Saldo insuficiente para saque de R$ ${value}. Saldo atual: R$ ${this.balance}`);
         }
+        return value;
     }
 
-    depositar(valor) {
-        if (valor > 0) {
-            this.saldo += valor;
-            console.log(`Deposito no valor de R$ ${valor} realizado com sucesso.`)
-            console.log(`Saldo atual: R$ ${this.saldo}`);
+    depositar(value) {
+        if (value > 0) {
+            this.balance += value;
+            console.log(`Deposito no valor de R$ ${value} realizado com sucesso.`)
+            console.log(`Saldo atual: R$ ${this.balance}`);
+            return value
         }
     }
 
@@ -32,9 +34,10 @@ customer.name = "Lucas";
 customer.cpf = 9999999999;
 
 const contaCorrenteLucas = new ContaCorrente();
-contaCorrenteLucas.saldo = 0;
+contaCorrenteLucas.balance = 0;
 contaCorrenteLucas.agency = 1001;
-contaCorrenteLucas.depositar(50);
+contaCorrenteLucas.depositar(200);
+contaCorrenteLucas.sacar(100);
 
 console.log(contaCorrenteLucas);
-console.log(contaCorrenteLucas.saldo);
+console.log(contaCorrenteLucas.balance);
