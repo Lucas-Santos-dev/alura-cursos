@@ -21,7 +21,14 @@ account1.customer = customer1;
 
 account0.transfer(200, account1);
 
+const account2 = new CurrentAccount();
+account2.customer = new Customer();
+account2.customer.name = "Davi";
+account2.customer.cpf = 77777777777;
+account2.agency = 1003;
+
 
 console.log(account0);
 console.log(account1);
+console.log(account2);
 
