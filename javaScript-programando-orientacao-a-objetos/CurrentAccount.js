@@ -1,8 +1,24 @@
+import { Customer } from "./Customer.js";
+
 export class CurrentAccount {
     agency;
     customer;
 
+    set customer(newValue){
+        if(newValue instanceof Customer){
+            this._customer = newValue;
+        }
+    }
+
+    get customer(){
+        return this._customer;
+    }
+
     balance = 0;
+
+    get balance(){
+        return this._balance;
+    }
 
     withdraw(value){
         if (this.balance >= value) {
