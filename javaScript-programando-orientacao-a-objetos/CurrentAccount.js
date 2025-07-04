@@ -2,7 +2,8 @@ import { Customer } from "./Customer.js";
 
 export class CurrentAccount {
     agency;
-    customer;
+    _customer;
+    _balance = 0;
 
     set customer(newValue){
         if(newValue instanceof Customer){
@@ -14,10 +15,13 @@ export class CurrentAccount {
         return this._customer;
     }
 
-    balance = 0;
-
     get balance(){
         return this._balance;
+    }
+
+    constructor(customer, agency){
+        this.agency = agency;
+        this._customer = customer;
     }
 
     withdraw(value){
