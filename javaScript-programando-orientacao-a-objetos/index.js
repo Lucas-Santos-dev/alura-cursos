@@ -9,6 +9,7 @@ const customer2 = new Customer("Davi", 77777777777);
 
 const customer3 = new Customer("Luana", 66666666666);
 
+
 const account0 = new CurrentAccount(1001, customer0);
 
 const account1 = new CurrentAccount(1001, customer1);
@@ -21,4 +22,6 @@ console.log(account0);
 console.log(account1);
 console.log(account2);
 console.log(account3);
+
+console.log(CurrentAccount.numberOfAccount);
 

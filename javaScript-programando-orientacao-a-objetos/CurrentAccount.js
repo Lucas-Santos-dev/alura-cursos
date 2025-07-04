@@ -4,6 +4,7 @@ export class CurrentAccount {
     agency;
     _customer;
     _balance = 0;
+    static numberOfAccount = 0;
 
     set customer(newValue){
         if(newValue instanceof Customer){
@@ -19,9 +20,10 @@ export class CurrentAccount {
         return this._balance;
     }
 
-    constructor(customer, agency){
+    constructor(agency, customer){
         this.agency = agency;
         this._customer = customer;
+        CurrentAccount.numberOfAccount += 1;
     }
 
     withdraw(value){
