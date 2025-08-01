@@ -13,13 +13,13 @@ export class NegotiationController {
         this.inputDate = document.querySelector('#date');
         this.inputAmount = document.querySelector('#amount');
         this.inputValue = document.querySelector("#value")
-        this.negociationsView.update();
+        this.negociationsView.update(this.negociations);
     }
 
     add(): void {
        const negotiation = this.createNegotiation();
        this.negociations.add(negotiation);
-
+       this.negociationsView.update(this.negociations);
        console.log(this.negociations.list());
        console.log(negotiation);
        this.clearForm();
