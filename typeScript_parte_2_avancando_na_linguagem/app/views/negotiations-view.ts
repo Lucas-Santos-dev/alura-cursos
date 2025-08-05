@@ -1,12 +1,8 @@
-import { Negotiation } from "../models/negotiation.js";
 import { Negotiations } from "../models/negotiations.js";
+import { View } from "./view.js";
 
-export class NegotiationView {
+export class NegotiationView extends View{
 
-    private element: HTMLElement;
-    constructor(selector: string) {
-        this.element = document.querySelector(selector);
-    }
     template(model: Negotiations): string {
         return `
         <table class="table table-hover table-bordered">
