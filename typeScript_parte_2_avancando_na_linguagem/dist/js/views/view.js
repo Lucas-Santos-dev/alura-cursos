@@ -7,6 +7,6 @@ export class View {
         this.element.innerHTML = template;
     }
     template(model) {
-        throw Error('Classe Filha precisa imprementar metodo pai ');
+        throw Error('Classe Filha precisa imprementar metodo template');
     }
 }

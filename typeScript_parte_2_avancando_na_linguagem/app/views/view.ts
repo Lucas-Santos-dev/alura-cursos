@@ -12,6 +12,6 @@ export class View <T>{
     }
 
     template(model: T): string {
-        throw Error ('Classe Filha precisa imprementar metodo pai ')
+        throw Error ('Classe Filha precisa imprementar metodo template');
     }
 }
