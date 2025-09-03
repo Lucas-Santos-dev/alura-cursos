@@ -8,6 +8,8 @@ import { GeneroLiterario, Livro } from '../../componentes/livro/livro';
 import { LivroComponent } from '../../componentes/livro/livro.component';
 import { SubtituloComponent } from '../../componentes/subtitulo/subtitulo.component';
 import { TituloComponent } from '../../componentes/titulo/titulo.component';
+import { LivroService } from '../../services/livro.service';
+
 
 @Component({
   selector: 'app-lista-livros',
@@ -25,6 +27,9 @@ import { TituloComponent } from '../../componentes/titulo/titulo.component';
 })
 export class ListaLivrosComponent implements OnInit {
   generosComLivros: { genero: GeneroLiterario; livros: Livro[] }[] = [];
+  livros: Livro[] = [];
+
+  constructor(private LivroService: LivroService) { }
 
   generos: GeneroLiterario[] = [
     { id: 'romance', value: 'Romance' },
@@ -35,7 +40,10 @@ export class ListaLivrosComponent implements OnInit {
   ];
 
   ngOnInit() {
-    this.organizarLivrosPorGenero();
+    this.LivroService.getBooks().subscribe((livros: Livro[]) => {
+      this.livros = livros;
+      console.log(this.livros);
+    });
   }
 
   organizarLivrosPorGenero() {
