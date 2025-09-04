@@ -25,7 +25,7 @@ export class LivroService {
     return this.httpClient.get<Livro[]>(this.API_URL);
   }
 
-  organizingBooksByGenre(): Observable<Map<string, Livro[]>>{
+  organizingBooksByGenre(): Observable<Map<string, Livro[]>> {
     return this.getBooks().pipe(
       map((livros: Livro[]) => {
         const booksByGenre = new Map<string, Livro[]>();
@@ -33,8 +33,8 @@ export class LivroService {
         livros.forEach((livro: Livro) => {
           const Idgenre = typeof livro.genero === 'string' ? livro.genero : livro.genero?.id;
 
-          if(Idgenre) {
-            if(!booksByGenre.has(Idgenre)) {
+          if (Idgenre) {
+            if (!booksByGenre.has(Idgenre)) {
               booksByGenre.set(Idgenre, []);
             }
             booksByGenre.get(Idgenre)?.push(livro);
@@ -43,6 +43,10 @@ export class LivroService {
         return booksByGenre;
       })
     )
+  }
+
+  addBook(newBook: Livro): Observable<Livro> {
+    return this.httpClient.post<Livro>(this.API_URL, newBook)
   }
 
 }

@@ -2,7 +2,7 @@
   <label [attr.for]="id()">{{ label() }}</label>
   <select [id]="id()" [(ngModel)]="value">
     <option value="" disabled>Selecione o gênero do livro</option>
-    @for (item of opcoes; track item.id) {
+    @for (item of options; track item.id) {
       <option [value]="item.id">{{ item.value }}</option>
       }
   </select>
