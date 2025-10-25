@@ -1,8 +1,8 @@
 import {
   Controller,
   Get,
-  // Post,
-  // Body,
+  Post,
+  Body,
   // Patch,
   // Param,
   // Delete,
@@ -10,8 +10,8 @@ import {
 import { EstadosService } from './estados.service';
 import { ApiOkResponse } from '@nestjs/swagger';
 import { EstadoDto } from './dto/estado.dto';
-// import { CreateEstadoDto } from './dto/create-estado.dto';
-// import { UpdateEstadoDto } from './dto/update-estado.dto';
+import { CreateEstadoDto } from './dto/create-estado.dto';
+import { UpdateEstadoDto } from './dto/update-estado.dto';
 
 @Controller('estados')
 export class EstadosController {
