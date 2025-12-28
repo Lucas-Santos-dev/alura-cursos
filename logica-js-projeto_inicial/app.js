@@ -90,13 +90,26 @@
 // }
 
 //Desafio 2: Crie um contador que começa em 10 e vá até 0 usando um loop while. Mostre cada número.
-let inicialNumber = 10;
+// let inicialNumber = 10;
 
-while(inicialNumber >= 0){
-    alert(`Número ${inicialNumber}`);
-    inicialNumber--;
-}
+// while(inicialNumber >= 0){
+//     alert(`Número ${inicialNumber}`);
+//     inicialNumber--;
+// }
 
-//Desafio 3: Crie um programa de contagem regressiva. Peça um número e conte deste número até 0, usando um loop whilw no console do navegador.
+//Desafio 3: Crie um programa de contagem regressiva. Peça um número e conte deste número até 0, usando um loop while no console do navegador.
+// let chosenNumber = prompt("Escolha um número");
 
-//Desafio 4: Crie umn programa de contagem progressiva. Peça um número e conte de 0 até esse número, usando um loop while no console do navegador.
+// while(chosenNumber >= 0){
+//     alert(`Contagem regressiva ${chosenNumber}`);
+//     chosenNumber--;
+// }
+
+//Desafio 4: Crie um programa de contagem progressiva. Peça um número e conte de 0 até esse número, usando um loop while no console do navegador.
+let chosenNumber = prompt("Escolha um número:");
+let inicialNumber = 0;
+
+while (chosenNumber >= inicialNumber){
+    alert(`Contagem progressiva ${inicialNumber}`);
+    inicialNumber++;
+};
