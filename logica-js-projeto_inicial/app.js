@@ -106,10 +106,41 @@
 // }
 
 //Desafio 4: Crie um programa de contagem progressiva. Peça um número e conte de 0 até esse número, usando um loop while no console do navegador.
-let chosenNumber = prompt("Escolha um número:");
-let inicialNumber = 0;
+// let chosenNumber = prompt("Escolha um número:");
+// let inicialNumber = 0;
 
-while (chosenNumber >= inicialNumber){
-    alert(`Contagem progressiva ${inicialNumber}`);
-    inicialNumber++;
-};
+// while (chosenNumber >= inicialNumber){
+//     alert(`Contagem progressiva ${inicialNumber}`);
+//     inicialNumber++;
+// };
+
+//----- Aula 4 ----- //
+
+alert('Boas vindas ao jogo do número secreto');
+let secretNumber = 2;
+
+let chosenNumber;
+
+let attempts = 1;
+
+//Enquanto chute não for igual ao número secreto
+while (chosenNumber != secretNumber) {
+    chosenNumber = prompt('Escolha um número entre 1 e 10');
+    // Se chosenNumber for igual ao número secreto
+    if (chosenNumber == secretNumber) {
+        break;
+    } else {
+        if (chosenNumber > secretNumber) {
+            alert(`O número secreto é menor que ${chosenNumber}`);
+        } else {
+            alert(`O número secreto é maior que ${chosenNumber}`);
+        }
+        attempts++;
+    };
+}
+
+if (attempts > 1){
+    alert(`Isso aí! Você descobriu o número secreto "${secretNumber}" com ${attempts} tentativas`);
+} else {
+    alert(`Isso aí! Você descobriu o número secreto "${secretNumber}" com ${attempts} tentativa`);
+}
