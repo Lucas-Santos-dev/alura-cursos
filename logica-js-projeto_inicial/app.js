@@ -116,51 +116,86 @@
 
 //----- Aula 4 ----- //
 
-alert('Boas vindas ao jogo do número secreto');
+// alert('Boas vindas ao jogo do número secreto');
 
-let chosenNumber;
+// let chosenNumber;
 
-let attempts = 1;
+// let attempts = 1;
 
-let secretNumber = parseInt(Math.random() * 100 + 1);
-console.log(secretNumber);
+// let secretNumber = parseInt(Math.random() * 100 + 1);
+// console.log(secretNumber);
 
-//Enquanto chute não for igual ao número secreto
-while (chosenNumber != secretNumber) {
-    chosenNumber = prompt('Escolha um número entre 1 e 100');
-    // Se chosenNumber for igual ao número secreto
-    if (chosenNumber == secretNumber) {
-        break;
-    } else {
-        if (chosenNumber > secretNumber) {
-            alert(`O número secreto é menor que ${chosenNumber}`);
-        } else {
-            alert(`O número secreto é maior que ${chosenNumber}`);
-        }
-        attempts++;
-    };
-}
+// //Enquanto chute não for igual ao número secreto
+// while (chosenNumber != secretNumber) {
+//     chosenNumber = prompt('Escolha um número entre 1 e 100');
+//     // Se chosenNumber for igual ao número secreto
+//     if (chosenNumber == secretNumber) {
+//         break;
+//     } else {
+//         if (chosenNumber > secretNumber) {
+//             alert(`O número secreto é menor que ${chosenNumber}`);
+//         } else {
+//             alert(`O número secreto é maior que ${chosenNumber}`);
+//         }
+//         attempts++;
+//     };
+// }
 
-let wordAttempts = attempts > 1 ? 'tentativas' : 'tentativa';
-alert(`Isso aí! Você descobriu o número secreto "${secretNumber}" com ${attempts} ${wordAttempts}`);
+// let wordAttempts = attempts > 1 ? 'tentativas' : 'tentativa';
+// alert(`Isso aí! Você descobriu o número secreto "${secretNumber}" com ${attempts} ${wordAttempts}`);
 
 //----- Desafios aula 4 ----- //
 
 // Desafio 1: Crie um programa que utilize o console.log para exibir uma mensagem de boas-vindas.
+// console.log("Sejam bem vindos!")
 
 // Desafio 2: Crie uma variável chamada "nome" e atribua a ela o seu nome. Em seguida, utilize o console.log para exibir a mensagem "Olá, [seu nome]!" no console do navegador.
+// let name = "Lucas";
+// console.log(`Olá ${name}`);
 
 // Desafio 3: Crie uma variável chamada "nome" e atribua a ela o seu nome. Em seguida, utilize o alert para exibir a mensagem "Olá, [seu nome]!" .
+// let name = "Lucas";
+// alert(`Olá ${name}`);
 
 // Desafio 4: Utilize o prompt e faça a seguinte pergunta: Qual a linguagem de programação que você mais gosta?. Em seguida, armazene a resposta em uma variável e mostre no console do navegador.
+// let response = prompt("Qual a linguagem de programação que você mais gosta?")
+// console.log(`Sua resposta é ${response}`);
 
 // Desafio 5: Crie uma variável chamada "valor1" e outra chamada "valor2", atribuindo a elas valores numéricos de sua escolha. Em seguida, realize a soma desses dois valores e armazene o resultado em uma terceira variável chamada "resultado". Utilize o console.log para mostrar a mensagem "A soma de [valor1] e [valor2] é igual a [resultado]." no console.
+// let value1 = 10;
+// let value2 = 5;
+
+// response = value1 + value2;
+
+// console.log(`A soma de ${value1} e ${value2} é igual a ${response}.`);
 
 // Desafio 6: Crie uma variável chamada "valor1" e outra chamada "valor2", atribuindo a elas valores numéricos de sua escolha. Em seguida, realize a subtração desses dois valores e armazene o resultado em uma terceira variável chamada "resultado". Utilize o console.log para mostrar a mensagem "A diferença entre [valor1] e [valor2] é igual a [resultado]." no console.
+// let value1 = 10;
+// let value2 = 5;
+
+// response = value1 - value2;
+
+// console.log(`A diferença entre ${value1} e ${value2} é igual a ${response}.`);
 
 // Desafio 7: Peça ao usuário para inserir sua idade com prompt. Com base na idade inserida, utilize um if para verificar se a pessoa é maior ou menor de idade, exibindo uma mensagem apropriada no console.
+// let age = prompt("Olá, digite aqui a sua idade:");
+
+// if(age >= 18){
+//     alert("Você é maior de idade");
+// } else{
+//     alert("Você é menor de idade");
+// }
 
 // Desafio 8: Crie uma variável "numero" e peça um valor com prompt verifique se é positivo, negativo ou zero. Use if-else para imprimir a respectiva mensagem.
+// let number = prompt("Digite aqui um número")
+
+// if (number > 0){
+//     alert("O número escolhido é positivo");
+// } else if (number < 0 ) {
+//     alert("O número escolhido é negativo");
+// } else {
+//     alert("O número escolhido é 0");
+// }
 
 // Desafio 9: Use um loop while para imprimir os números de 1 a 10 no console.
 
