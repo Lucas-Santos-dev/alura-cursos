@@ -198,11 +198,32 @@
 // }
 
 // Desafio 9: Use um loop while para imprimir os números de 1 a 10 no console.
+// let inicalNumber = 0;
+// while(inicalNumber <= 10){
+//     alert("Contagem " + inicalNumber);
+//     inicalNumber++
+// }
 
 // Desafio 10: Crie uma variável "nota" e atribua um valor numérico a ela. Use if-else para determinar se a nota é maior ou igual a 7 e exiba "Aprovado" ou "Reprovado" no console.
+// let nota = prompt("Digite aqui a sua nota:")
+
+// if (nota >= 7){
+//     alert("Parabéns, você foi aprovado!")
+// } else{
+//     alert("Você está reprovado");
+// }
 
 // Desafio 11: Use o Math.random para gerar qualquer número aleatório e exiba esse número no console.
+// let secretNumber = parseInt(Math.random() * 100 + 1);
+// console.log(secretNumber);
+// alert(secretNumber);
 
 // Desafio 12: Use o Math.random para gerar um número inteiro entre 1 e 10 e exiba esse número no console.
+// let secretNumber = parseInt(Math.random() * 10 + 1);
+// console.log(secretNumber);
+// alert(secretNumber);
 
 // Desafio 13: Use o Math.random para gerar um número inteiro entre 1 e 1000 e exiba esse número no console.
+// let secretNumber = parseInt(Math.random() * 1000 + 1);
+// console.log(secretNumber);
+// alert(secretNumber);
