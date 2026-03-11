@@ -227,3 +227,35 @@
 // let secretNumber = parseInt(Math.random() * 1000 + 1);
 // console.log(secretNumber);
 // alert(secretNumber);
+
+//----- Aula 5 ----- //
+
+alert('Boas vindas ao jogo do número secreto');
+
+let maxNumber = 5000;
+
+let chosenNumber;
+
+let attempts = 1;
+
+let secretNumber = parseInt(Math.random() * maxNumber + 1);
+console.log(secretNumber);
+
+//Enquanto chute não for igual ao número secreto
+while (chosenNumber != secretNumber) {
+    chosenNumber = prompt(`Escolha um número entre 1 e ${maxNumber}`);
+    // Se chosenNumber for igual ao número secreto
+    if (chosenNumber == secretNumber) {
+        break;
+    } else {
+        if (chosenNumber > secretNumber) {
+            alert(`O número secreto é menor que ${chosenNumber}`);
+        } else {
+            alert(`O número secreto é maior que ${chosenNumber}`);
+        }
+        attempts++;
+    };
+}
+
+let wordAttempts = attempts > 1 ? 'tentativas' : 'tentativa';
+alert(`Isso aí! Você descobriu o número secreto "${secretNumber}" com ${attempts} ${wordAttempts}`);
